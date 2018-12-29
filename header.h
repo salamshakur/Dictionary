@@ -11,6 +11,7 @@
 typedef struct Trie {
   int         isWord;
   char        * definition;
+  char        * language;
   struct Trie * children[ALPHABET];
 } Trie;
 
@@ -76,7 +77,7 @@ void search(Trie * root){
     word[i] = tolower(word[i]);
 
     int j = (int) word[i] - (int) 'a';
-    
+
     if(current->children[j] == NULL)
     {
       printf("(%s) does not exists.\n", word);
