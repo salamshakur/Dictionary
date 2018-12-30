@@ -15,7 +15,7 @@ int main() {
     printf("\nPlease enter a word or enter QUIT to exit program: \n"); scanf("%s", word);
 
     // Exit program
-    if(strcmp(word, "QUIT") == 0)
+    if(strcmp(word, "QUIT") == 0 || strcmp(word, "quit") == 0)
       return EXIT_SUCCESS;
 
     // Define word if exist, else create new word

@@ -29,6 +29,10 @@ void insert(Trie * root, char * word, char * definition, char * language) {
   // Loop through word...
   for(int i = 0; i < length; i++)
   {
+    // If letter is uppercase, convert them to lowercase
+    if (word[i] >= 'A' && word[i] <= 'Z')
+         word[i] = word[i] + 32;
+
     // Convert each letter into an index
     int n = (int) word[i] - (int) 'a';
 
@@ -64,6 +68,10 @@ int doesExist(Trie * root, char * word) {
   // Loop through word...
   for(int i = 0; i < length; i++)
   {
+    // If letter is uppercase, convert them to lowercase
+    if (word[i] >= 'A' && word[i] <= 'Z')
+         word[i] = word[i] + 32;
+
     // Convert each letter into an index
     int n = (int) word[i] - (int) 'a';
 
@@ -94,6 +102,10 @@ void define(Trie * root, char * word) {
   // Loop through word...
   for(int i = 0; i < length; i++)
   {
+    // If letter is uppercase, convert them to lowercase
+    if (word[i] >= 'A' && word[i] <= 'Z')
+         word[i] = word[i] + 32;
+
     // Convert each letter into an index
     int j = (int) word[i] - (int) 'a';
 
@@ -117,7 +129,7 @@ void create(Trie * root, char * word){
   scanf("%s", input);
 
   // If yes, create word
-  if(strcmp(input, "YES") == 0)
+  if(strcmp(input, "YES") == 0 || strcmp(input, "yes") == 0 )
   {
     // Read in definition
     printf("\nPlease enter a definition: \n");
