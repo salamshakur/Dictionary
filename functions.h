@@ -104,3 +104,31 @@ void define(Trie * root, char * word) {
   // Print word's definition and language it belongs to
   printf("\n%s -- %s -- %s\n", word, current->definition, current->language);
 }
+
+/* Prompt User to Create New Word*/
+void create(Trie * root, char * word){
+
+  // Promp user if they would like to add new word into dictionary
+  printf("\nWord does not exist, would you like to add it? Please enter: YES or NO.\n");
+  char * input = (char *) malloc(sizeof(char) * 4);
+  scanf("%s", input);
+
+  // If yes, create word
+  if(strcmp(input, "YES") == 0)
+  {
+    // Read in definition
+    printf("\nPlease enter a definition: \n");
+    char * definition = (char *) malloc(sizeof(char) * MAX);
+    scanf(" %[^\n]", definition);
+
+    // Read in language
+    printf("\nPlease enter what language this word belongs to: \n");
+    char * language = (char *) malloc(sizeof(char) * MAX);
+    scanf("%s", language);
+
+    // Insert word into dictionary
+    insert(root, word, definition, language);
+    printf("\nWord has been added.\n");
+  }
+
+}
