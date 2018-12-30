@@ -5,10 +5,11 @@
 #include <ctype.h>
 
 /* Definition */
-#define FALSE    0
-#define TRUE     1
-#define ALPHABET 26
-#define MAX      190000
+#define FALSE     0
+#define TRUE      1
+#define ALPHABET  26
+#define MAX       190000
+#define DELIMITER " - "
 
 /* Trie Node Object*/
 typedef struct  Trie {

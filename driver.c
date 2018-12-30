@@ -7,6 +7,52 @@ int main() {
   // Create a root for dictionary tree
   Trie * root = createNode();
 
+  // Open text file, if exist. Otherwise, create new file
+  FILE * file = fopen("data.txt", "r");
+
+  if(file == NULL)
+  {
+    file = fopen("data.txt", "w");
+  }
+  else
+  {
+
+    char buff[MAX];
+
+    while(!feof(file))
+    {
+      char line[MAX];
+      fgets(line, MAX, file);
+
+      int i = 0;
+      char * data[MAX];
+
+      char * token = strtok(line, "*");
+      while(token != NULL)
+      {
+        data[i] = token;
+        token = strtok(NULL, "*");
+        i++;
+      }
+
+      char * word = data[0];
+      char * definition = data[1];
+      char * language = data[2];
+
+      // FOR DEBEUGGING
+      printf("%s\n", word);
+      printf("********************\n");
+      printf("%s\n", definition);
+      printf("********************\n");
+      printf("%s\n", language);
+      printf("********************\n");
+
+      fscanf(file, "%s", buff);
+    }
+
+  }
+
+
   // Infinite loop to keep program open
   while(TRUE)
   {
