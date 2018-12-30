@@ -102,7 +102,10 @@ void define(Trie * root, char * word) {
   }
 
   // Print word's definition and language it belongs to
-  printf("\n%s -- %s -- %s\n", word, current->definition, current->language);
+  printf("\n");
+  printf("%s\n", word);
+  printf("Definition: %s\n", current->definition);
+  printf("language: %s\n", current->language);
 }
 
 /* Prompt User to Create New Word*/
