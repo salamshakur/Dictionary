@@ -17,3 +17,11 @@ typedef struct  Trie {
   char          * language;   // Indicates the language this word belongs to
   struct Trie   * children[ALPHABET]; // Linked nodes, each corresponding to every letter of the alphabet
 } Trie;
+
+/* Proto Functions */
+Trie * createNode();
+void insert(Trie * root, char * word, char * definition, char * language);
+int doesExist(Trie * root, char * word);
+void define(Trie * root, char * word);
+void create(Trie * root, char * word, FILE * file);
+void saveText(FILE * file, char * word, char * definition, char * language);

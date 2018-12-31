@@ -121,7 +121,7 @@ void define(Trie * root, char * word) {
 }
 
 /* Prompt User to Create New Word*/
-void create(Trie * root, char * word){
+void create(Trie * root, char * word, FILE * file) {
 
   // Promp user if they would like to add new word into dictionary
   printf("\nWord does not exist, would you like to add it? Please enter: YES or NO.\n");
@@ -143,7 +143,19 @@ void create(Trie * root, char * word){
 
     // Insert word into dictionary
     insert(root, word, definition, language);
+
+    // Save data into text file
+    saveText(file, word, definition, language);
+
+    // Prompt user that process was a success
     printf("\nWord has been added.\n");
   }
+
+}
+
+/* Save Word Into Text File */
+void saveText(FILE * file, char * word, char * definition, char * language) {
+
+  
 
 }
