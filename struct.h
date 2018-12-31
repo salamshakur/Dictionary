@@ -9,7 +9,6 @@
 #define TRUE      1
 #define ALPHABET  26
 #define MAX       190000
-#define DELIMITER " - "
 
 /* Trie Node Object*/
 typedef struct  Trie {

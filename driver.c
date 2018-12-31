@@ -16,42 +16,28 @@ int main() {
   }
   else
   {
+    char line[MAX];
+    char data[3][MAX];
 
-    /*char line[MAX];
-
+    // If file found, loop through each line in text file
     while(fgets(line, MAX, file))
     {
+      // Store each section of text, separated by the / symbol, into an array
+      strcpy(data[0], strtok(line, "/"));
+      strcpy(data[1], strtok(NULL, "/"));
+      strcpy(data[2], strtok(NULL, "/"));
 
-      int i = 0;
-      char * data[MAX];
-
-      char * token = strtok(line, "*");
-      while(token != NULL)
-      {
-        data[i] = token;
-        token = strtok(NULL, "*");
-        i++;
-      }
-
+      // Store those sections into a word, definition, and language accordingly
       char * word = data[0];
       char * definition = data[1];
       char * language = data[2];
 
-      // FOR DEBEUGGING
-      printf("%s\n", word);
-      printf("********************\n");
-      printf("%s\n", definition);
-      printf("********************\n");
-      printf("%s\n", language);
-      printf("********************\n");
-
-      fscanf(file, "%s", line);
-    }*/
-
+      // Insert those words into the dictionary
+      insert(root, word, definition, language);
+    }
   }
 
-
-  // Infinite loop to keep program open
+  // loop to keep program open
   while(TRUE)
   {
     // Allocates memory & ask user to enter a word to look up or enter QUIT to exit program
