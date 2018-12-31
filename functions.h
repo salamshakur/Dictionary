@@ -156,6 +156,15 @@ void create(Trie * root, char * word, FILE * file) {
 /* Save Word Into Text File */
 void saveText(FILE * file, char * word, char * definition, char * language) {
 
-  
+  char * str = (char *) malloc(sizeof(char) * MAX);
+  strcpy(str, word);
+  strcat(str, "/");
+  strcat(str, definition);
+  strcat(str, "/");
+  strcat(str, language);
+  strcat(str, "\n");
+
+  fputs(str, file);
+
 
 }

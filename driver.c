@@ -9,7 +9,7 @@ int main() {
 
   // Open exisiting text file, otherwise create a new one
   FILE * file = fopen("data.txt", "a+");
-
+  
   char line[MAX];
   char data[3][MAX];
 
