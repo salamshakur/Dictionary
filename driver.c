@@ -17,12 +17,10 @@ int main() {
   else
   {
 
-    char buff[MAX];
+    /*char line[MAX];
 
-    while(!feof(file))
+    while(fgets(line, MAX, file))
     {
-      char line[MAX];
-      fgets(line, MAX, file);
 
       int i = 0;
       char * data[MAX];
@@ -47,8 +45,8 @@ int main() {
       printf("%s\n", language);
       printf("********************\n");
 
-      fscanf(file, "%s", buff);
-    }
+      fscanf(file, "%s", line);
+    }*/
 
   }
 
