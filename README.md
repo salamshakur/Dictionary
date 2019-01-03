@@ -1,2 +1,4 @@
 # Dictionary
-A dictionary program written in C to help me keep track of new words and languages that I am currently learning
+A multi-language dictionary app created in C by implementing Tries.
+This program was created to help teach me new languages but storing words, definitions, and its language into a save file
+that can be loaded into the dictionary every time the program starts.
